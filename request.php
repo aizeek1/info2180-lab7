@@ -1,5 +1,6 @@
 <?php
 // For PHP 5 and up
+//
 
 # accept a term (keyword)
 # respond with a value
