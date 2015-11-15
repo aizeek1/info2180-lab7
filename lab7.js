@@ -1,12 +1,17 @@
 window.onload = function(){
-    data();
+    mydata();
 };
-           function data () {
-                    $('lookup').observe('click', function(){ 
-                    new Ajax.Request("request.php",
+           function mydata () {
+                    document.getElementById("search").addEventListener("click", function(){ 
+                    new Ajax.Request("request.php?q=definition",
                        {
                           method: "get",
-                       }
-                    }
+                          onSuccess: doSomething
+                       });
+                    });
+           }
+        
+           function doSomething(data){
+               alert(data.responseText);
            }
           
